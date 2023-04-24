@@ -1,0 +1,44 @@
+@mixin button1($color) {
+    width: 120px;
+    height: 50px;
+    background-color: $color;
+    color: white;
+    border: 1px black solid;
+    text-align: center;
+    font-weight: bold;
+
+    }
+
+
+button:nth-child(2){
+   margin-right: 20px;
+   margin-left: auto;
+   @include button1(green);
+     &:hover{
+         background-color: white;
+         color: green;
+         cursor: pointer;
+     }
+   
+
+   }
+
+
+button:first-child{
+    margin-left: 300px;
+    @include button1(red);
+    &:hover{
+        background-color: white;
+        color: red;
+        cursor: pointer;
+    }
+
+    
+  }
+
+body{
+    display: flex;
+  }
+
+
+ 
